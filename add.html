@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html>
+<head>
+
+</head>
+<title>page</title>
+
+<body>
+
+<div>
+    <form>
+        firstNum:<input type="text" id="1" name="one">
+          secondNum:<input type="text" id="2" name="two">
+          calculate:<input type="text"  id="ans" name="ans">
+          <button type="submit" onclick="add()">submit</button>
+      </form>
+     </div>
+        
+
+<style>
+      div{
+                display=flex;
+                justify-content:center;
+                text-alignment:center;
+             }
+   </style>
+   
+   
+   </body>
+   <script>
+       let a=parseInt(document.getElementById("1"));
+              let b=parseInt(document.getElementById("2"));
+              let ans=a+b;
+              document.querySelector("#ans").innerHtml=ans;
+         </script>
+   </html>
+   
+ 
