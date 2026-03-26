@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            font-family: Arial;
+        }
+        .container{
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+            width: 350px;
+        }
+        h2{
+            text-align: center;
+        }
+        input{
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+        }
+        button{
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .msg{
+            text-align: center;
+            color: green;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- MESSAGE WILL SHOW HERE -->
+    {% if message %}
+        <div class="msg">{{ message }}</div>
+    {% endif %}
+
+    <form method="POST" action="/register">
+        <h2>Register</h2>
+
+        <p>Id:<input type="text" name="id" required></p>
+        <p>Name:<input type="text" name="name" required></p>
+        <p>Age:<input type="number" name="age" required></p>
+
+        <p>Gender:
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+        </p>
+
+        <p>Place:<input type="text" name="place" required></p>
+        <p>Email:<input type="email" name="email" required></p>
+        <p>Password:<input type="password" name="password" required></p>
+
+        <button type="submit">Register</button>
+    </form>
+
+</div>
+
+</body>
+</html>
